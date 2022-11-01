@@ -1,0 +1,568 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ------------------------------------  carousel  ----------------------------------------------*/
+
+.carousel {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+/* ------------------------------------  carousel  ----------------------------------------------*/
+
+/* ------------------------------------  carousel__section  -------------------------------------*/
+
+.carousel__section {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+.width--100vw {
+  width: 100vw;
+}
+
+.height--100vh {
+  height: 100vh;
+}
+
+.bottom--50vh {
+  bottom: 98vh;
+}
+
+/* ------------------------------------  carousel__section  -------------------------------------*/
+
+/* ------------------------------------  carousel__button  --------------------------------------*/
+
+.carousel__group {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel__item {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  width: 100vw;
+  height: 0.1vh;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: 200ms all linear;
+  -o-transition: 200ms all linear;
+  transition: 200ms all linear;
+  -webkit-transition-delay: 200ms;
+       -o-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.carousel__holder {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 26vh;
+  opacity: 1;
+}
+
+.carousel__holder::before {
+  content: "";
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: contain;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------------  carousel__video ----------------*/
+
+video {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+.carousel__video {
+  content: "";
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+}
+
+.z-index---1 {
+  z-index: -1;
+}
+
+/* ------------------------------------  carousel__button  --------------------------------------*/
+
+/*--------------------------------------------slide----------------------------------------------*/
+
+.slide {
+  display: -ms-grid;
+  display: grid;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition-delay: 0ms;
+       -o-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+/*--------------------------------------------slide----------------------------------------------*/
+
+/* ------------------------------------  carousel__button  --------------------------------------*/
+
+.carousel-button {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 4vw;
+  height: 7.5vh;
+  -ms-grid-rows: (2,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: 0.1vh solid rgba(0, 0, 0, 0);
+  z-index: 15;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+  -webkit-transition: all 0.35s linear;
+  -o-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+
+.btn__arrow-left--svg,
+.btn__arrow-right--svg {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  z-index: 15;
+}
+
+.btn__arrow-left--svg:hover circle,
+.btn__arrow-right--svg:hover circle,
+.btn__arrow-left--svg:focus circle,
+.btn__arrow-right--svg:focus circle {
+  stroke: #ffa500;
+  -webkit-transition: all 0.35s linear;
+  -o-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+
+.btn__arrow-left--svg:hover polyline,
+.btn__arrow-right--svg:hover polyline,
+.btn__arrow-left--svg:focus polyline,
+.btn__arrow-right--svg:focus polyline {
+  stroke: #ffa500;
+  -webkit-transition: all 0.35s linear;
+  -o-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+
+.prev {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 4vw;
+  height: 7.5vh;
+  left: 60vw;
+  font-size: 5vh;
+  z-index: 15;
+  top: 130vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.next {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 4vw;
+  height: 7.5vh;
+  left: 60vw;
+  font-size: 5vh;
+  z-index: 15;
+  top: 105vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+/* ------------------------------------  carousel__button  --------------------------------------*/
+
+/* ------------------------------------  carousel-button--h2  ----------------------------*/
+
+.carousel-button--h2 {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+/* ------------------------------------  carousel-button--h2  ----------------------------*/
+
+/* ------------------------------------  carousel slider__h2 ------------------------------------*/
+
+.slider__h2 {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+  z-index: 12;
+  top: 20vh;
+  left: 65vw;
+  width: 30vw;
+  z-index: 15;
+}
+
+.top--60vh {
+  top: 60vh;
+}
+
+.left--65vw {
+  left: 65vw;
+}
+
+.width--30vw {
+  width: 30vw;
+}
+
+.z-index--15 {
+  z-index: 15;
+}
+
+.h2__title--slider {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  font-size: 2vh;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  color: orange;
+  line-height: 4vh;
+  z-index: 12;
+}
+
+/* ------------------------------------  carousel slider__h2 ------------------------------------*/
+
+/* ------------------------------------  carousel__button  --------------------------------------*/
+
+.button__group {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+-ms-grid-rows: (2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  width: 23vw;
+  height: 10vh;
+  top: 10vh;
+  left: 69vw;
+}
+
+.btn__light {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgb(255, 255, 255);
+  border: 0.25vh solid #1a1a1a;
+  border-radius: 2vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #3b3b3b;
+  cursor: pointer;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.8vh;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 4vh;
+  min-width: 5vw;
+  outline: none;
+  padding: 1vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  width: 10vw;
+  height: 5vh;
+  will-change: transform;
+  z-index: 100;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.btn__light:disabled {
+  pointer-events: none;
+}
+
+.btn__light:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  -webkit-box-shadow: rgb(255, 255, 255) 0 1vh 1vw;
+          box-shadow: rgb(255, 255, 255) 0 1vh 1vw;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.btn__light:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+.btn__dark {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0.25vh solid rgb(255, 255, 255);
+  border-radius: 2vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.8vh;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 4vh;
+  min-width: 5vw;
+  outline: none;
+  padding: 1vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  width: 8vw;
+  height: 5vh;
+  will-change: transform;
+  z-index: 100;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.btn__dark:disabled {
+  pointer-events: none;
+}
+
+.btn__dark:hover {
+  color: #1a1a1a;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: #ffa500 0 1vh 1vw;
+          box-shadow: #ffa500 0 1vh 1vw;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.btn__dark:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* ------------------------------------  carousel__button  --------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  .left--65vw {
+    left: 0vw;
+  }
+
+  .width--30vw {
+    width: 100vw;
+  }
+
+  .next {
+    left: 85vw;
+    top: 95vh;
+  }
+
+  .btn__arrow-left--svg {
+    width: 15vh;
+  }
+
+  .prev {
+    left: 85vw;
+    top: 145vh;
+  }
+
+  .btn__arrow-right--svg {
+    width: 15vh;
+  }
+
+  .slider__h2 {
+    top: 26vh;
+    left: 0vw;
+    width: 100vw;
+    height: 35vh;
+    z-index: 15;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    justify-items: start;
+  }
+
+  .h2__title--slider {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 600;
+    line-height: 5vh;
+    color: rgb(255, 255, 255);
+    padding-left: 3vh;
+  }
+
+  .button__group {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    width: 45vw;
+    height: 10vh;
+    left: 25vw;
+    grid-column-gap: 10vw;
+  }
+
+  .btn__light,
+  .btn__dark {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    width: 18vw;
+    height: 7vh;
+    font-family: "Lato", sans-serif;
+    font-size: 3vh;
+    font-weight: 400;
+    padding: 1vw;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+  }
+}
